@@ -151,7 +151,7 @@ main {
   position: absolute;
   top: 50%;
   right: 4rem;
-  transform: translate(2rem, -50%);
+  transform: translate(1rem, -50%);
   z-index: 2;
   max-width: 25px;
 }
@@ -180,36 +180,36 @@ main {
   margin-left: 0.5rem;
 }
 
-/* .h-list-book{
+.center .h-list-book {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
 }
 
-.h-list-book .books{
+.center .h-list-book .books {
   display: flex;
   flex-direction: row;
 }
 
-.h-list-book .books .book{
+.center .h-list-book .books .book {
   display: flex;
   justify-content: center;
   margin: 10px 0;
 }
 
-.h-list-book .top-title h2{
+.center .h-list-book .top-title h2 {
   color: white;
-} */
+}
 
 @media only screen and (min-width: 1366px) {
-  .h-list-book .books .book {
+  .center .h-list-book .books .book {
     flex: 0 0 20%;
     max-width: 20%;
   }
 }
 
 @media only screen and (max-width: 1366px) {
-  .h-list-book .books .book {
+  .center .h-list-book .books .book {
     flex: 0 0 25%;
     max-width: 25%;
   }
@@ -219,7 +219,7 @@ main {
   main {
     margin-right: 2rem;
   }
-  .h-list-book .books .book {
+  .center .h-list-book .books .book {
     flex: 0 0 33%;
     max-width: 33%;
   }
@@ -240,7 +240,7 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-  .h-list-book .books .book {
+  .center .h-list-book .books .book {
     flex: 0 0 50%;
     max-width: 50%;
   }
