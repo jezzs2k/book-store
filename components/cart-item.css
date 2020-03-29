@@ -49,7 +49,6 @@
 .h-cart-item .h-cart-body .delete {
   display: flex;
   align-items: flex-end;
-  height: 30%;
   cursor: pointer;
   padding: 0;
   margin: 0;

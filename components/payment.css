@@ -7,7 +7,6 @@
 
 .payment {
   width: 95%;
-  margin: auto;
 }
 
 .payment .count-money,
@@ -105,4 +104,17 @@
   outline: none;
   color: white;
   font-size: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .payment {
+    margin-bottom: 90px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .payment {
+    margin: auto;
+    margin-bottom: 90px;
+  }
 }
