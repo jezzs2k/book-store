@@ -190,8 +190,11 @@ main {
   margin-left: 0.5rem;
 }
 
-.center .h-list-book {
+.center {
   margin-top: 40px;
+}
+
+.center .h-list-book {
   display: flex;
   flex-direction: column;
 }
@@ -214,6 +217,130 @@ main {
 
 .center .h-list-book .top-title h2 {
   color: white;
+}
+
+.center .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  list-style: none;
+}
+
+.center .pagination .page-item {
+  width: 30px;
+  height: 30px;
+  border: 1px solid snow;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  box-shadow: 0 0 0 #34495e;
+  position: relative;
+}
+
+.center .pagination .page-item::before {
+  content: attr(data-pagination);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: snow;
+}
+
+.center .pagination .page-item:nth-child(1)::before {
+  content: '\f053';
+  font-family: 'fontawesome';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: snow;
+}
+.center .pagination .page-item:nth-child(6)::before {
+  content: '\f054';
+  font-family: 'fontawesome';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: snow;
+}
+
+.center .pagination .page-item:hover {
+  box-shadow: 0 0 5px #34495e;
+}
+
+.center .pagination .page-item i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: snow;
+}
+
+.scroll-top {
+  position: fixed;
+  right: 1%;
+  bottom: 2%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  transform: translateY(0px);
+}
+
+.scroll-top:hover::before {
+  transform: translateY(-3px);
+}
+
+.scroll-top::before {
+  content: '\f077';
+  font-family: 'FontAwesome';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.footer .bottom {
+  display: flex;
+  align-items: flex-end;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .bottom .text {
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .bottom .text span {
+  color: #2980b9;
+}
+
+.footer .top {
+  background-image: url(./image/1379.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: 30px 200px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -241,6 +368,12 @@ main {
   .center .h-list-book .books .book {
     flex: 0 0 33%;
     max-width: 33%;
+  }
+}
+
+@media only screen and (max-width: 1190px) {
+  .center .product-detail {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -319,69 +452,4 @@ main {
   .footer .top {
     background-position: 0 150px !important;
   }
-}
-
-.scroll-top {
-  position: fixed;
-  right: 1%;
-  bottom: 2%;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  cursor: pointer;
-  transition: 0.4s ease-in-out;
-  transform: translateY(0px);
-}
-
-.scroll-top:hover::before {
-  transform: translateY(-3px);
-}
-
-.scroll-top::before {
-  content: '\f077';
-  font-family: 'FontAwesome';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: #fff;
-}
-
-.footer {
-  width: 100%;
-  margin-top: 40px;
-}
-
-.footer .bottom {
-  display: flex;
-  align-items: flex-end;
-  bottom: 0;
-  background-color: white;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer .bottom .text {
-  color: black;
-  text-align: center;
-  font-weight: 600;
-  margin: 0;
-  padding: 0;
-}
-
-.footer .bottom .text span {
-  color: #2980b9;
-}
-
-.footer .top {
-  background-image: url(./image/1379.jpg);
-  background-size: contain;
-  background-attachment: fixed;
-  background-position: 30px 200px;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 300px;
 }

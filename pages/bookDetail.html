@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đắc nhân tâm</title>
+    <link rel="stylesheet" href="./bookDetail.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../components/cart-item.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="App">
+      <nav class="h-navbar">
+        <ul class="h-navbar-nav">
+          <li class="h-navbar-item">
+            <a href="http://127.0.0.1:5501/index.html" class="h-nav-link">
+              <div class="nav-icon">
+                <img class="link-icon" src="../image/home.svg" />
+              </div>
+              <span class="link-text">Home</span>
+            </a>
+          </li>
+          <li class="h-navbar-item">
+            <a href="#" class="h-nav-link">
+              <div class="nav-icon">
+                <img class="link-icon" src="../image/book.svg" />
+              </div>
+              <span class="link-text">Book</span>
+            </a>
+          </li>
+          <li class="h-navbar-item">
+            <a href="http://127.0.0.1:5501/pages/cart.html" class="h-nav-link">
+              <div class="nav-icon">
+                <img class="link-icon" src="../image/smart-cart.svg" />
+              </div>
+              <span class="link-text">Cart</span>
+            </a>
+          </li>
+          <li class="h-navbar-item">
+            <a href="#" class="h-nav-link">
+              <span class="link-text">Login</span>
+            </a>
+          </li>
+          <li class="h-navbar-item">
+            <a href="#" class="h-nav-link">
+              <span class="link-text">Signin</span>
+            </a>
+          </li>
+          <li class="h-navbar-item">
+            <a href="#" class="h-nav-link">
+              <div class="nav-icon">
+                <img class="link-icon" src="../image/user.svg" />
+              </div>
+            </a>
+          </li>
+          <li class="h-navbar-item">
+            <a href="#" class="h-nav-link">
+              <span class="link-text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <main class="main">
+        <div class="header">
+          <div class="search-book">
+            <button>
+              <img
+                src="../image/search.svg"
+                alt="search book"
+                class="search-icon"
+              />
+            </button>
+            <input
+              type="text"
+              id="search"
+              class="search-in"
+              placeholder="Enter Something"
+            />
+          </div>
+          <div class="logo">
+            <a href="#" class="logo-link">
+              <img
+                src="../image/study.svg"
+                class="logo-web"
+                alt="logo-study"
+                alt="logo study"
+              />
+              <span class="text-logo">Book Store</span>
+            </a>
+          </div>
+        </div>
+        <div class="center">
+          <div class="product-detail">
+            <div class="left-info">
+              <div class="slide-image-product">
+                <div class="small-image">
+                  <img
+                    src="../image/Dac-nhan-tam.jpg"
+                    alt="book"
+                    class="image-item"
+                  />
+                  <img
+                    src="../image/Dac-nhan-tam2.jpg"
+                    alt="book"
+                    class="image-item"
+                  />
+                  <img
+                    src="../image/Dac-nhan-tam3.jpg"
+                    alt="book"
+                    class="image-item"
+                  />
+                  <img
+                    src="../image/Dac-nhan-tam.jpg"
+                    alt="book"
+                    class="image-item"
+                  />
+                </div>
+                <div class="big-image">
+                  <img src="../image/Dac-nhan-tam1.jpg" alt="book" />
+                </div>
+              </div>
+            </div>
+            <div class="center-info">
+              <div class="basic-info">
+                <h2 class="name">Đắc nhân tâm</h2>
+                <p class="author">Dale Carnegie</p>
+                <div class="book-star">
+                  <div class="title">
+                    <p>Đánh giá</p>
+                    <a href="#">(Chi tiết)</a>
+                  </div>
+                  <img
+                    src="../image/star.svg"
+                    alt="star"
+                    style="max-width: 20px;"
+                    class="_1-start"
+                  />
+                  <img
+                    src="../image/star.svg"
+                    alt="star"
+                    style="max-width: 20px;"
+                    class="_1-start"
+                  />
+                  <img
+                    src="../image/star.svg"
+                    alt="star"
+                    style="max-width: 20px;"
+                    class="_1-start"
+                  />
+                  <img
+                    src="../image/star.svg"
+                    alt="star"
+                    style="max-width: 20px;"
+                    class="_1-start"
+                  />
+                </div>
+              </div>
+              <div class="info-money">
+                <h2 class="price">50.403đ</h2>
+                <p>Giảm giá <span>30%</span></p>
+                <p>Tiết kiệm cho mọi nhà</p>
+              </div>
+              <div class="amount-buy h-cart-item">
+                <div class="add_remove">
+                  <span>+</span>
+                  <span>1</span>
+                  <span>-</span>
+                </div>
+                <button class="btn btn-danger">
+                  <span><i class="fa fa-cart-plus mr-2"></i></span>Chọn mua
+                </button>
+              </div>
+            </div>
+            <div class="right-info">
+              <h4 class="name-store">
+                <span><i class="fa fa-home"></i></span>
+                các nhà cung cấp
+                <span>(Cam kết 100%)</span>
+              </h4>
+              <p>
+                Nhà cung cấp sách ..<button class="btn btn-info">
+                  Truy cập
+                </button>
+              </p>
+              <p>
+                Nhà cung cấp sách ..<button class="btn btn-info">
+                  Truy cập
+                </button>
+              </p>
+              <p>
+                Nhà cung cấp sách ..<button class="btn btn-info">
+                  Truy cập
+                </button>
+              </p>
+              <p>
+                Nhà cung cấp sách ..<button class="btn btn-info">
+                  Truy cập
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="top"></div>
+          <div class="bottom">
+            <p class="text"><span>@</span> CopyRight by jezzs</p>
+          </div>
+        </div>
+      </main>
+      <a href="#">
+        <div class="scroll-top"></div>
+      </a>
+    </div>
+  </body>
+</html>
