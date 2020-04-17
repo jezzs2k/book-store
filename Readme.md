@@ -1,11 +1,12 @@
 # Book Store
 
 [https://book-store-codersx.web.app/](https://book-store-codersx.web.app/)
+
 [https://console.firebase.google.com/project/book-store-codersx/overview](https://console.firebase.google.com/project/book-store-codersx/overview)
 
-[Project master css codersX]('https://school.coders-x.com/')
-
 ##### This is _Basic app_ make by Jezzs
+
+[Project master css codersX]('https://school.coders-x.com/')
 
 #### Project used: `Css 80%` , `Javascript 5%`, `Html 15%`
 
