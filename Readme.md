@@ -6,7 +6,7 @@
 
 ##### This is _Basic app_ make by Jezzs
 
-[Project master css codersX]('https://school.coders-x.com/')
+[Project master css codersX](https://school.coders-x.com/)
 
 #### Project used: `Css 80%` , `Javascript 5%`, `Html 15%`
 
