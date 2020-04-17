@@ -19,6 +19,18 @@ pagination.addEventListener('click', (e) => {
   const num = e.target.getAttribute('data-pagination');
   const button = e.target.getAttribute('data-button');
 
+  Array.from(e.path[1].children).forEach((item, i) => {
+    item.classList.remove('active');
+    if (button === 'previous' && i === 1) {
+      item.classList.add('active');
+    }
+    if (button === 'next' && i === 4) {
+      item.classList.add('active');
+    }
+  });
+
+  // item.classList.add('active');
+
   if (button === 'previous') {
     if (page === 1) {
       page = 1;
@@ -46,6 +58,7 @@ pagination.addEventListener('click', (e) => {
       });
     }
   } else {
+    e.target.classList.add('active');
     page = parseInt(num);
   }
 

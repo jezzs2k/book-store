@@ -227,6 +227,10 @@ main {
   list-style: none;
 }
 
+.center .pagination .page-item.active {
+  box-shadow: 0 0 5px #34495e;
+}
+
 .center .pagination .page-item {
   width: 30px;
   height: 30px;
