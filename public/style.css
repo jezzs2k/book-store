@@ -1,0 +1,455 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #ff94db !important;
+}
+
+body::-webkit-scrollbar {
+  width: 0.15rem;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 20px;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+}
+
+.h-navbar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: white;
+  z-index: 1000;
+}
+
+.h-navbar .h-navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.h-navbar .h-navbar-nav .h-navbar-item {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.h-navbar .h-navbar-nav .h-navbar-item .h-nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.h-navbar .h-navbar-nav .h-navbar-item .h-nav-link .nav-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #f2f2f2;
+  border: none;
+  border-radius: 10px;
+}
+
+.h-navbar .h-navbar-nav .h-navbar-item .h-nav-link .nav-icon img {
+  max-width: 2rem;
+}
+
+.h-navbar .h-navbar-nav .h-navbar-item .h-nav-link .nav-icon .link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+  transition: 0.4 ease-in-out;
+  filter: grayscale(100%) opacity(0.7);
+}
+
+.h-navbar .h-navbar-nav .h-navbar-item:hover .h-nav-link .nav-icon .link-icon {
+  filter: grayscale(0) opacity(1);
+}
+
+.h-navbar .h-navbar-nav .h-navbar-item .link-text {
+  color: #707070;
+  margin-top: 0.4rem;
+  transition: 0.4 ease-in-out;
+  font-weight: 700;
+}
+
+.h-navbar .h-navbar-nav .h-navbar-item:hover .link-text {
+  color: black;
+}
+
+.h-navbar .h-navbar-nav .h-navbar-item:nth-child(4):hover .link-text,
+.h-navbar .h-navbar-nav .h-navbar-item:nth-child(5):hover .link-text {
+  text-decoration: underline;
+}
+
+.h-navbar .h-navbar-nav .h-navbar-item:nth-child(4),
+.h-navbar .h-navbar-nav .h-navbar-item:nth-child(6) {
+  margin-bottom: 0.1rem;
+  margin-top: auto;
+}
+
+.h-navbar .h-navbar-nav .h-navbar-item:nth-child(4),
+.h-navbar .h-navbar-nav .h-navbar-item:nth-child(5) {
+  display: none;
+}
+
+.h-navbar .h-navbar-nav .h-navbar-item:nth-child(5) {
+  margin-bottom: 2rem;
+}
+
+main {
+  margin-left: 6rem;
+  margin-right: 4rem;
+  padding: 1rem;
+  height: 100%;
+}
+
+.header,
+.footer {
+  margin-left: 1em;
+}
+
+.header {
+  margin-top: 30px;
+  display: flex !important;
+  width: 100%;
+}
+
+.search-book {
+  max-width: 25rem;
+  height: 45px;
+  position: relative;
+  flex-basis: 25rem;
+}
+
+.search-book input {
+  width: 90%;
+  height: 100%;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  padding-left: 20px;
+}
+
+.search-book .search-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.search-book .search-icon {
+  position: absolute;
+  top: 50%;
+  right: 4rem;
+  transform: translate(1rem, -50%);
+  z-index: 2;
+  max-width: 25px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.logo .logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo .logo-link .logo-web {
+  max-width: 40px;
+}
+
+.logo .logo-link .text-logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #707070;
+  margin-left: 0.5rem;
+}
+
+.center {
+  margin-top: 40px;
+}
+
+.center .h-list-book {
+  display: flex;
+  flex-direction: column;
+}
+
+.center .h-list-book .books {
+  display: flex;
+  flex-direction: row;
+}
+
+.center .h-list-book .books .book {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.center .h-list-book .top-title {
+  margin-left: 1em;
+}
+
+.center .h-list-book .top-title h2 {
+  color: white;
+}
+
+.center .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  list-style: none;
+}
+
+.center .pagination .page-item {
+  width: 30px;
+  height: 30px;
+  border: 1px solid snow;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  box-shadow: 0 0 0 #34495e;
+  position: relative;
+}
+
+.center .pagination .page-item::before {
+  content: attr(data-pagination);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: snow;
+}
+
+.center .pagination .page-item:nth-child(1)::before {
+  content: '\f053';
+  font-family: 'fontawesome';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: snow;
+}
+.center .pagination .page-item:nth-child(6)::before {
+  content: '\f054';
+  font-family: 'fontawesome';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: snow;
+}
+
+.center .pagination .page-item:hover {
+  box-shadow: 0 0 5px #34495e;
+}
+
+.center .pagination .page-item i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: snow;
+}
+
+.scroll-top {
+  position: fixed;
+  right: 1%;
+  bottom: 2%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  transform: translateY(0px);
+}
+
+.scroll-top:hover::before {
+  transform: translateY(-3px);
+}
+
+.scroll-top::before {
+  content: '\f077';
+  font-family: 'FontAwesome';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.footer .bottom {
+  display: flex;
+  align-items: flex-end;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .bottom .text {
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .bottom .text span {
+  color: #2980b9;
+}
+
+.footer .top {
+  background-image: url(./image/1379.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: 30px 200px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+}
+
+@media only screen and (min-width: 1366px) {
+  .center .h-list-book .books .book {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .center .h-list-book .books .book {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .header,
+  .footer {
+    margin-left: 0em;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    margin-right: 2rem;
+  }
+  .center .h-list-book .books .book {
+    flex: 0 0 33%;
+    max-width: 33%;
+  }
+}
+
+@media only screen and (max-width: 1190px) {
+  .center .product-detail {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  main {
+    margin-right: 2rem;
+  }
+  .footer {
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .h-navbar {
+    bottom: 0;
+    width: 5rem;
+    background-color: white;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .center {
+    padding: 1rem;
+  }
+  .center .h-list-book .books .book {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .h-navbar {
+    max-width: 100vw;
+    width: 100vw;
+    height: 4rem;
+    bottom: 0;
+  }
+
+  .h-navbar .h-navbar-nav {
+    flex-direction: row;
+  }
+
+  .h-navbar .h-navbar-nav .h-navbar-item {
+    margin: 0;
+  }
+
+  .h-navbar .h-navbar-nav .h-navbar-item .h-nav-link .link-text {
+    display: none;
+  }
+
+  .h-navbar .h-navbar-nav .h-navbar-item:nth-child(4),
+  .h-navbar .h-navbar-nav .h-navbar-item:nth-child(5),
+  .h-navbar .h-navbar-nav .h-navbar-item:nth-child(7) {
+    display: none;
+  }
+
+  .h-navbar .h-navbar-nav .h-navbar-item .h-nav-link .nav-icon .link-icon {
+    filter: grayscale(0) opacity(1);
+  }
+
+  .search-book {
+    max-width: 20rem;
+  }
+
+  .logo .logo-link .text-logo {
+    display: none;
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
+  }
+
+  main .footer {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .footer .top {
+    background-position: 0 150px !important;
+  }
+}

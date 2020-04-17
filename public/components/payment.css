@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.payment {
+  width: 95%;
+}
+
+.payment .count-money,
+.payment .code-discount {
+  width: 100%;
+  margin: auto;
+  border: 1px solid white;
+  padding: 20px 0;
+  transition: 0.3s ease-in-out;
+}
+
+.payment .count-money:hover,
+.payment .code-discount:hover {
+  box-shadow: 0 0 5px white;
+}
+
+.payment .count-money .provisional {
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+
+.payment .count-money .provisional,
+.payment .count-money .into-money {
+  display: flex;
+}
+
+.payment .count-money .into-money {
+  padding-top: 20px;
+}
+
+.payment .count-money .provisional .text,
+.payment .count-money .into-money .text {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.payment .count-money .into-money .money,
+.payment .count-money .provisional .money {
+  margin: 0;
+  padding: 0;
+  padding: 0 20px;
+}
+
+.payment .count-money .into-money .money span {
+  font-size: 0.8rem;
+}
+
+.payment .h-btn {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: #e74c3c;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin: 40px 0;
+}
+
+.payment .h-btn:hover {
+  background: #f12d19;
+}
+
+.payment .code-discount .name {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
+.payment .code-discount .form-discout {
+  padding: 0 20px;
+}
+
+.payment .code-discount .form-discout .code {
+  width: 70%;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #bcbcbc;
+  height: 35px;
+  padding: 0 10px;
+}
+
+.payment .code-discount .form-discout .h-btn-accept {
+  width: 20%;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  background: #e67e22;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .payment {
+    margin-bottom: 90px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .payment {
+    margin: auto;
+    margin-bottom: 90px;
+  }
+}

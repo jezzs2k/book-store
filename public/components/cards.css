@@ -1,0 +1,52 @@
+.h-card {
+  width: 15rem;
+  background-color: white;
+  box-shadow: 0 0 3px white;
+  transition: 0.3s ease-in-out;
+}
+
+.h-card:hover {
+  box-shadow: 0px 0 6px;
+}
+
+.h-card .h-card-content {
+  text-decoration: none;
+}
+
+.h-card .h-card-img {
+  width: 10rem;
+  margin: auto;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h-card .h-card-body {
+  padding: 0 20px;
+  padding-bottom: 5px;
+}
+
+.h-card .h-card-body h3 {
+  margin-bottom: 2px;
+  font-size: 1.4rem;
+  color: #747474;
+}
+
+.h-card .h-card-body p {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #747474;
+}
+
+.h-card .h-card-body p.h-card-text {
+  padding-left: 8px;
+}
+
+.h-card .h-card-body p.h-payment {
+  color: black;
+  font-size: 1.3rem;
+  margin: 10px 0;
+  font-weight: 700;
+}

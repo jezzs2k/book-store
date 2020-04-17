@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Store - Book Store</title>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to Firebase Hosting</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./components/cards.css" />
     <link
@@ -21,6 +20,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.14.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.14.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.14.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.14.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.14.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
   </head>
   <body>
     <div class="App">
@@ -43,7 +52,7 @@
             </a>
           </li>
           <li class="h-navbar-item">
-            <a href="http://127.0.0.1:5501/pages/cart.html" class="h-nav-link">
+            <a href="/pages/cart.html" class="h-nav-link">
               <div class="nav-icon">
                 <img class="link-icon" src="./image/smart-cart.svg" />
               </div>
@@ -135,11 +144,22 @@
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./index.js"></script>
-
-    <script src="/__/firebase/init.js"></script>
-    <script src="/__/firebase/7.14.1/firebase-app.js"></script>
-    <script src="/__/firebase/7.14.1/firebase-analytics.js"></script>
-    <script src="/__/firebase/7.14.1/firebase-auth.js"></script>
-    <script src="/__/firebase/7.14.1/firebase-firestore.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(
+            (feature) => typeof app[feature] === 'function'
+          );
+          document.getElementById(
+            'load'
+          ).innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML =
+            'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,127 @@
+.center .product-detail {
+  margin-top: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1.5fr 1.5fr 1fr;
+  background-color: white;
+}
+
+.center .product-detail .left-info {
+  border-right: 2px solid #f5f6fa;
+  padding: 0 0.4em;
+}
+
+.center .product-detail .slide-image-product {
+  display: flex;
+  flex-direction: row;
+}
+
+.center .product-detail .small-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.center .product-detail .small-image .image-item {
+  width: 80px;
+  margin: 2px 0;
+  border: 1px solid #ffffff;
+  padding: 3px;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.center .product-detail .small-image .image-item:hover {
+  border: 1px solid #0abde3;
+}
+
+.center .product-detail .slide-image-product .big-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.center .product-detail .slide-image-product .big-image img {
+  max-width: 450px;
+}
+
+.center .center-info {
+  border-right: 2px solid #f5f6f5;
+}
+
+.center .center-info .basic-info,
+.center-info .info-money {
+  padding: 1em;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #f5f6fa;
+}
+
+.center .center-info .book-star .title {
+  font-size: 0.9em;
+}
+
+.center .center-info .book-star .title p {
+  display: inline-block;
+}
+
+.center .center-info .info-money p,
+.center .center-info .info-money h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.center .center-info .info-money p {
+  font-size: 0.8em;
+}
+
+.center .center-info .amount-buy {
+  padding: 1em;
+  border-bottom: 2px solid #f5f6fa;
+}
+
+.center .center-info .h-cart-item {
+  border: none;
+}
+
+.center .center-info .info-money h2.price,
+.center .center-info .info-money p span {
+  color: #e74c3c;
+}
+
+.center .right-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 1em;
+}
+
+.center .right-info .name-store {
+  color: tomato;
+}
+
+.center .right-info .name-store span:first-child i {
+  color: #0097e6;
+  font-size: 1.8em;
+}
+
+.center .right-info .name-store span:last-child {
+  color: #e84118;
+  font-size: 0.5em;
+  display: block;
+  margin-left: 45px;
+}
+
+.center .right-info p {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.center .right-info p .btn {
+  font-size: 0.7em;
+  max-width: 80px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
